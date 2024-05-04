@@ -2,23 +2,41 @@
 
 /** Globals **/
 *, body, html { padding: 0; margin: 0; }
+body { font-family: "Montserrat", sans-serif; }
 a { text-decoration:  none; }
 li { list-style-type: none; }
+.todo--heading { font-size: 62px; color: #fff; margin-bottom: 1rem; }
+.todo--subheading { font-size: 40px; color: #fff; margin-bottom: 1rem; }
+
 
 /** Main To Do **/ 
-.todo { background-color: green; padding: 4rem; border-radius: 2px; }
+.todo__wrapper { background-color: green; padding: 3rem 4rem; border-radius: 2px; }
 
 /** Containers **/ 
 .site__wrapper { display: flex; justify-content: center; align-items: center; height: 100vh; }
+.todo__list--container { margin-top: 2rem; }
 
-/** input **/
-input[type=text] { padding: 0.5rem 0.5rem; color: red; border-radius: 2px; border: none; width: 550px;  }
+/** form **/
+.todo__form { position: relative; }
+input[type=text] { padding: 0.7rem 0.5rem; color: #444; border-radius: 2px; border: none; width: 550px; font-size: 18px; }
+
+/** Btns **/
+.btn { border: none; border-radius: 2px; cursor: pointer;}
+.btn--item--done { color: green; }
+.btn--item--delete { color: red; }
+.btn--submit { padding: 0.8rem 2rem; font-size: 16px; position: absolute; right: 0; }
+.btn--item { padding: 0.5rem 1rem; font-size: 14px; }
+
+/** Icons **/
+.icon { margin-left: 0.5rem; }
 
 /** ToDo List & Items **/
-.todo__list { margin-top: 1rem; display: flex; gap: 5px; flex-direction: column; }
-.todo__list--item { color: #fff; font-size: 26px; }
+.todo__list { margin-top: 0.5rem; display: flex; gap: 5px; flex-direction: column; }
+.todo__list--item { color: #fff; font-size: 20px; }
 
 .todo__list--item--content { display: flex; justify-content: space-between; }
+
+
 
 /** JS Identifiers **/
 .done { text-decoration: line-through; font-weight: bolder; }

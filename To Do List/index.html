@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!--Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
     <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
 
@@ -12,28 +20,28 @@
 <body>
     
     <div class="site__wrapper">
-        <div class="todo">
-            <h1>Your ToDo List</h1>
+        <div class="todo__wrapper">
+            <h1 class="todo--heading">Your ToDo List</h1>
             <div class="todo__container">
-                <form action="">
-                    <input type="text">
-                    <button class="btn--submit">Add in your To Do</button>
+                <form class="todo__form" action="">
+                    <input id="todo__input" type="text" />
+                    <button id="todo__inputBtn" class="btn btn--submit">Add To Do<span class=""><i class="icon fa-solid fa-arrow-right"></i></span></button>
                 </form> 
-                <h2>Your Items</h2>
-                <ul class="todo__list">
-                    <li class="todo__list--item">
-                        <div class="todo__list--item--content">
-                            <div>Do Raye</div>
-                            <button>Is it done?</button>
-                        </div>
-                    </li>
-                    <li class="todo__list--item">
-                        <div class="todo__list--item--content">
-                            <div class="done">Do Shopping</div>
-                            <button>Is it done?</button>
-                        </div>
-                    </li>
-                </ul>
+                <div class="todo__list--container">
+                    <h2 class="todo--subheading">Your ToDo Items</h2>
+                    <ul id="todo__list--items" class="todo__list">
+                        <li class="todo__list--item">
+                            <div class="todo__list--item--content">
+                                <div>Do Raye</div>
+                                <div>
+                                    <button class="btn btn--item btn--item--done"><i class="fa-solid fa-check"></i></button>
+                                    <button class="btn btn--item btn--item--delete"><i class="fa-solid fa-xmark"></i></button>
+                                </div>    
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
             </div>
         </div>
     </div>    
